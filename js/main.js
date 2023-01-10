@@ -10,7 +10,15 @@ navigator.serviceWorker?.register('service-worker.js').then(reg => {
 
 function listenersEMascaras() {
 	document.querySelectorAll('input').forEach(el => {
-		if (el.getAttribute('type') == 'tel') {
+		if (['cepRem', 'cepDest'].includes(el.id)) {
+			IMask(el, {
+				mask: '00000-000'
+			})
+		} else if (['cpfRem', 'cpfDest'].includes(el.id)) {
+			IMask(el, {
+				mask: '00000000000000' //(\d{3}\.\d{3}\.\d{3}-\d{2}|\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2})/
+			})
+		} else if (el.getAttribute('type') == 'tel') {
 			if (el.getAttributeNames()?.includes('data-valor')) {
 				IMask(el, {
 					mask: 'num',
@@ -26,7 +34,9 @@ function listenersEMascaras() {
 				})
 				if (el.id != 'totalValor') el.onchange = () => sumValor()
 			} else {
-				IMask(el, {mask: '0000'})
+				IMask(el, {
+					mask: Number
+				})
 			}
 			if (el.getAttributeNames()?.includes('data-quant')) {
 				el.onchange = () => sumQuant()
