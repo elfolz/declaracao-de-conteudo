@@ -45,6 +45,7 @@ function listenersEMascaras() {
 		if (el.getAttributeNames()?.includes('data-save')) {
 			el.onchange = e => localStorage.setItem(e.target.id, e.target.value.trim())
 		}
+		if (params[el.id]) el.value = params[el.id]
 	})
 }
 
@@ -67,8 +68,6 @@ function sumValor() {
 }
 
 function init() {
-	const hoje = new Date()
-	const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 	document.querySelector('#dataDia').value = hoje.getDay()
 	document.querySelector('#dataMes').value = meses[hoje.getMonth()]
 	document.querySelector('#dataAno').value = hoje.getFullYear()
@@ -83,4 +82,15 @@ function init() {
 document.onreadystatechange = () => {
 	if (document.readyState != 'complete') return
 	init()
+}
+
+const hoje = new Date()
+const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+const params = {}
+const queryParams = location.search.substr(1)
+if (queryParams.length) {
+	queryParams?.split('&')?.forEach(el => {
+		let data = el.split('=')
+		params[data[0]] = decodeURI(data[1])
+	})
 }
