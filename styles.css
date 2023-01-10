@@ -1,0 +1,258 @@
+* {
+	font-family: sans-serif;
+}
+body {
+	overflow: hidden;
+	width: 210mm;
+	height: 297mm;
+	margin: 0 auto;
+	text-align: center;
+}
+main {
+	position: relative;
+}
+img {
+	width: 210mm;
+	height: auto;
+}
+button {
+	height: 32px;
+	cursor: pointer;
+}
+input {
+	position: absolute;
+	font-size: 12px;
+	background: none;
+	height: 17px;
+	border: none;
+	padding: 0 0 2px 0;
+}
+input[type=tel] {
+	text-align: right;
+}
+input#nomeRem {
+	top: 80px;
+	left: 61px;
+	width: 321px;
+}
+input#endereco1Rem {
+	top: 100px;
+	left: 82px;
+	width: 298px;
+}
+input#endereco2Rem {
+	top: 120px;
+	left: 23px;
+	width: 358px;
+}
+input#cidadeRem {
+	top: 140px;
+	left: 66px;
+	width: 229px;
+}
+input#ufRem {
+	top: 140px;
+	left: 322px;
+	width: 58px;
+}
+input#cepRem {
+	top: 160px;
+	left: 46px;
+	width: 117px;
+}
+input#cpfRem {
+	top: 160px;
+	left: 229px;
+	width: 151px;
+}
+input#nomeDest {
+	top: 80px;
+	left: 433px;
+	width: 335px;
+}
+input#endereco1Dest {
+	top: 100px;
+	left: 456px;
+	width: 312px;
+}
+input#endereco2Dest {
+	top: 120px;
+	left: 397px;
+	width: 372px;
+}
+input#cidadeDest {
+	top: 140px;
+	left: 440px;
+	width: 248px;
+}
+input#ufDest {
+	top: 140px;
+	left: 715px;
+	width: 53px;
+}
+input#cepDest {
+	top: 160px;
+	left: 420px;
+	width: 117px;
+}
+input#cpfDest {
+	top: 160px;
+	left: 603px;
+	width: 165px;
+}
+
+input#item1Id {
+	top: 216px;
+	left: 22px;
+	width: 47px;
+}
+input#item1Desc {
+	top: 216px;
+	left: 78px;
+	width: 431px;
+}
+input#item1Quant {
+	top: 216px;
+	left: 519px;
+	width: 113px;
+}
+input#item1Vaor {
+	top: 216px;
+	left: 640px;
+	width: 128px;
+}
+input#item2Id {
+	top: 235px;
+	left: 22px;
+	width: 47px;
+}
+input#item2Desc {
+	top: 235px;
+	left: 78px;
+	width: 431px;
+}
+input#item2Quant {
+	top: 235px;
+	left: 519px;
+	width: 113px;
+}
+input#item2Vaor {
+	top: 235px;
+	left: 642px;
+	width: 128px;
+}
+input#item3Id {
+	top: 254px;
+	left: 22px;
+	width: 47px;
+}
+input#item3Desc {
+	top: 254px;
+	left: 78px;
+	width: 431px;
+}
+input#item3Quant {
+	top: 254px;
+	left: 519px;
+	width: 113px;
+}
+input#item3Vaor {
+	top: 254px;
+	left: 642px;
+	width: 128px;
+}
+input#item4Id {
+	top: 273px;
+	left: 22px;
+	width: 47px;
+}
+input#item4Desc {
+	top: 273px;
+	left: 78px;
+	width: 431px;
+}
+input#item4Quant {
+	top: 273px;
+	left: 519px;
+	width: 113px;
+}
+input#item4Vaor {
+	top: 273px;
+	left: 642px;
+	width: 128px;
+}
+input#item5Id {
+	top: 292px;
+	left: 22px;
+	width: 47px;
+}
+input#item5Desc {
+	top: 292px;
+	left: 78px;
+	width: 431px;
+}
+input#item5Quant {
+	top: 292px;
+	left: 519px;
+	width: 113px;
+}
+input#item5Vaor {
+	top: 292px;
+	left: 642px;
+	width: 128px;
+}
+input#totalQuant {
+	top: 310px;
+	left: 519px;
+	width: 113px;
+}
+input#totalValor {
+	top: 310px;
+	left: 642px;
+	width: 128px;
+}
+input#totalPeso {
+	top: 329px;
+	left: 519px;
+	width: 250px;
+}
+input#dataCidade {
+	top: 469px;
+	left: 23px;
+	width: 139px;
+}
+input#dataDia {
+	top: 469px;
+	left: 179px;
+	width: 40px;
+}
+input#dataMes {
+	top: 469px;
+	left: 250px;
+	width: 130px;
+}
+input#dataAno {
+	top: 469px;
+	left: 406px;
+	width: 74px;
+}
+@media screen and (min-width: 210mm) {
+	body {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		height: fit-content;
+	}
+}
+@media print {
+	* {
+		-webkit-print-color-adjust: exact !important;
+	}
+	@page {
+		margin: 0;
+	}
+	button {
+		display: none;
+	}
+}
