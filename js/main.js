@@ -61,7 +61,7 @@ function sumValor() {
 	let valores = Array.from(document.querySelectorAll('input[data-valor]:not(#totalValor)'))
 	let total = valores.reduce((pre, cur) => {
 		let valor = parseFloat(cur.value.replace(/\./g, '').replace(/,/g, '.') || '0')
-		pre = parseFloat((valor + (pre ?? 0)))
+		pre = parseFloat(valor + (pre ?? 0))
 		return pre
 	}, 0)
 	document.querySelector('#totalValor').value = total.toFixed(2).replace(/\./g, ',')
@@ -80,8 +80,7 @@ function init() {
 }
 
 document.onreadystatechange = () => {
-	if (document.readyState != 'complete') return
-	init()
+	if (document.readyState == 'complete') init()
 }
 
 const hoje = new Date()
