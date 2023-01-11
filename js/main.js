@@ -68,7 +68,7 @@ function sumValor() {
 }
 
 function init() {
-	document.querySelector('#dataDia').value = hoje.getDay()
+	document.querySelector('#dataDia').value = hoje.getDate()
 	document.querySelector('#dataMes').value = meses[hoje.getMonth()]
 	document.querySelector('#dataAno').value = hoje.getFullYear()
 	document.querySelector('#print').onclick = () => print()
